@@ -1,0 +1,425 @@
+/*styling the body  */
+
+/* 
+    bg-color 000337
+
+
+*/
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(170, 217, 217, 0.65) transparent;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(170, 217, 217, 0.65);
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+/*-------------------styling the bg color and set the primary properties------------------*/
+body {
+    background-color: #000337;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.primary-btn {
+    background-color: #6961DE;
+}
+
+.secondry-btn {
+    background-color: transparent;
+    border:1px solid #85cfd0;
+    transition: .2s ease-in;
+}
+
+.first-circle{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-color: rgba(128, 128, 215, 0.65);
+    z-index: -1;
+    top: -62%;
+    left: -10%;
+    border-radius: 50%;
+    filter: blur(124px);
+}
+
+.second-circle {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-color: rgba(170, 217, 217, 0.65);
+    z-index: -1;
+    top: 26%;
+    left: 88%;
+    border-radius: 50%;
+    filter: blur(165px);
+}
+.third-circle {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-color: rgba(170, 217, 217, 0.65);
+    z-index: -1;
+    top: 250%;
+    left: -35%;
+    border-radius: 50%;
+    filter: blur(165px);
+}
+
+.fourth-circle {
+    position: absolute;
+    z-index: -1;
+    top: 382%;
+    left: 56%;
+    width: 600px;
+    height: 569px;
+    overflow:hidden ;
+}
+.fourth-circle div {
+    border-radius: 50%;
+    filter: blur(165px);
+    background-color: rgba(128, 128, 215, 0.65);
+    width: 600px;
+    height: 600px;
+    position: relative;
+    top: 78%;
+    left: 28%;
+}   
+
+/*-------------------------------- nav-bar styling --------------------------------*/
+
+nav {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-weight: bold;
+    font-family: 'Outfit';
+    font-size: 1.4rem;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;    
+}
+
+.menu li {
+    padding-left:15px;
+}
+
+.menu li a {
+    transition: .5s ease-in;
+}
+.menu li ::before {
+    content: '';
+    position: relative;
+    display: block;
+    top: 100%;
+    width: 0%;
+    height: 2px;
+    transition: .2s ease-in;
+    background-color: #85cfd0;
+}
+.menu li :hover::before{
+    animation-name: example;
+    width: 100%;
+    animation-duration: .2s;
+}
+
+@keyframes example {
+    from {width: 0%;}
+    to {width: 100%;}
+  }
+
+
+
+/*---------------------------------heros section---------------------------------*/
+
+.heros-section {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.heros-header {
+    font-size: 100px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 90px;
+    animation: fade-left 1s ease-in;
+}
+
+.heros-section p {
+    margin: 5% 0;
+    font-size: 25px;
+    animation: fade-bottom 2s ease-in;
+}
+
+.btns {
+    width:260px ;
+    height: 60px;
+    border-radius: 44px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    border: none;
+}
+
+.heros-section .primary-btn {
+    animation: fade-btns 2.5s ease-in;
+}
+
+.heros-section .secondry-btn {
+    border:1px solid #85cfd0;
+    animation: fade-btns 1s ease-in;
+}
+.secondry-btn:hover {
+    background-color: #85cfd07c;
+}
+.photo img {
+    animation: fade-right 1.5s ease-in;
+}
+
+/*-------------------------logos-section--------------------------------*/
+
+.logos {
+    margin-top: 5%;
+}
+
+.logos-body {
+    width: 100%;
+    background-color:rgba(67, 67, 120, 0.35);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 94px;
+    padding: 35px;
+} 
+
+.logos-body img {
+    height: 25px;
+}
+
+
+/*------------------------ANALYTICS-SECTION---------------------------*/
+
+.analytics{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.h2-header {
+    font-size: 66px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 70px;
+}
+
+.benifits p, .analytics p {
+    font-size: 20px;
+}
+/*--------------------benifits-section-------------------------------*/
+
+.benifits {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+}
+
+/*-------------------testimonials-section----------------------------*/
+.testimonials {
+    margin-top: 5%;
+
+}
+.test-header {
+    text-align:center;
+}
+
+.client-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.client-card {
+    margin: 0 3%;
+    text-align: center;
+}
+
+.client-card img {
+    border-radius: 50%;
+    top: 12%;
+    position: relative;
+}
+.client-card img::after {
+    content: '';
+    position: relative;
+    display: block;
+    background-color: tomato;
+}
+
+
+.client-cards-body {
+    background: #6961DE;
+    padding: 21% 15px;
+    padding-bottom: 8%;
+    border-radius: 24px;
+}
+
+
+
+/*------------------------get-started-section ------------------------------*/
+
+.get-started {
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+    background: rgba(104, 96, 210, 1);
+    background: linear-gradient(160deg, rgba(105, 97, 222, 1) 0%, rgba(105, 97, 222, 1) 35%, rgba(133, 207, 208, 1) 100%); 
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 44px;
+}
+
+.get-started p {
+    color: #000;
+}
+.get-started button {
+    background-color: black;
+}
+
+/*--------------footer-section-------------------------------*/
+
+.footer {
+    margin-top: 15%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-footer {
+    width: 310px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 7%;
+    border-radius: 12px;
+    justify-content: space-between;
+    background: rgba(128, 128, 215, 0.36);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-footer button {
+    width: 80px;
+    border-radius: 9px;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    color: white;
+    background-color: black;
+}
+
+.footer-bg {
+    width: 100%;
+    height: 10px;
+    background: rgba(104, 96, 210, 1);
+    background: linear-gradient(160deg, rgba(105, 97, 222, 1) 0%, rgba(105, 97, 222, 1) 35%, rgba(133, 207, 208, 1) 100%); 
+
+}
+
+
+/*------------------------animation-the-page-sectoin----------------------------*/
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-btns {
+    0% {
+      
+      opacity: 0;
+    }
+    100% {
+      
+      opacity: 1;
+    }
+  }
